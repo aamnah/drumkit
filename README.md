@@ -6,7 +6,7 @@
 
 - Uses `<kbd>` and `<audio>` elements and custom `data-` data attributes
 - Using `<kbd>` elements for keyboard keys. Nothing special, most browsers would use a monospace font for `<kbd>` elements.
-- The key to making the drumkit work is `data` attributes. Data attributes let you make up your own keys. `data-blah`. We're using them to link keys to their sounds
+- The key to making the drumkit work is `data` attributes. Data attributes let you make up your own attributes. `data-blah`. We're using them to link keys to their sounds and to be able to easily target them in javascript
 
 ```html
 <div data-key="keyG" class="key">
@@ -37,13 +37,13 @@ Doesn't work:
 let audio = this.document.querySelector(`audio[data-key="${e.code}"]`)
 ```
 
-- The `play()` method comes from the `HTMLMediaElement` interface
+- The `play()` method comes from the `HTMLMediaElement` / `HTMLAudioElement` interface
 - `transitionend` event is fired when a CSS transition has completed
 
 
 Links
 ---
-- [Keybode.info](http://keycode.info/)
+- [Keycode.info](http://keycode.info/)
 - [MDN: click](https://developer.mozilla.org/en-US/docs/Web/Events/click)
 - [MDN: keydown](https://developer.mozilla.org/en-US/docs/Web/Events/keydown)
 - [MDN: HTMLMediaElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/)

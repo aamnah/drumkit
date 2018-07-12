@@ -40,6 +40,21 @@ let audio = this.document.querySelector(`audio[data-key="${e.code}"]`)
 - The `play()` method comes from the `HTMLMediaElement` / `HTMLAudioElement` interface
 - `transitionend` event is fired when a CSS transition has completed
 
+### Delays in playing Audio
+This seems to be a browser thing. Chrome plays audio on click just fine, without any delays. Opera and Safari seem to have issues with audio playback where there's a 0.5 sec delay, even after the audio file has already loaded.
+
+Other people seem to have had the [same](https://stackoverflow.com/questions/9811429/html5-audio-tag-on-safari-has-a-delay) [issue](https://stackoverflow.com/questions/46836692/delay-in-javascript-audio-playback)
+
+- Preloading `<audio>` and `<video>` on iOS devices is disabled to save bandwidth. My delay issue persists though even after the files have downloaded, and i'm not on an iOS device.
+- You also [can't load multiple audio/video files](https://stackoverflow.com/questions/7862391/mobile-safari-audio-cache-manifest/7972609#7972609). 
+> If you play one file, go and play another, and then come back and it'll just load that file all over again. 
+ 
+### Converting audio files to reduce file sizes
+Download [Media Converter (macOS)](http://media-converter.sourceforge.net/)
+
+- Just converting the file from `.wav` to `.mp3` reduced the file size from 439kb to 70kb.
+- For universal browser supported, it's better to convert the files to `.webm`
+- Converting all 11 sound files from `wav` to `web` reduced the overall size from 1.1mb to 414kb 
 
 Links
 ---

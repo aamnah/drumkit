@@ -1,0 +1,58 @@
+/* 
+https://coolors.co/000000-2f4550-586f7c-b8dbd9-f4f4f9
+*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+  padding: 2em;
+  background: rgb(244, 244, 249);
+  color: rgb(47, 69, 80);
+}
+
+h1, p {
+  margin-bottom: 1em;
+}
+
+.keys {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+}
+.key {
+  background: rgb(184, 219, 217);
+  border: 4px solid rgb(88, 111, 124);
+  border-radius: 5px;
+  text-align: center;
+  padding: 1em;
+
+  transition: all .1s;
+}
+.key:hover {
+  cursor: pointer;
+}
+.playing {
+  transform: scale(1.1);
+  border-color: #08B2E3;
+  box-shadow: 0 1px 10px #08B2E3;
+}
+.keyTitle {
+  display: block;
+  font-size: 2.4em;
+  font-family: serif;
+  font-weight: bold;
+  padding-bottom: 10px;
+  text-shadow: 1px 2px rgba(0, 0, 0, .1);
+}
+.keyDesc {
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: .8em;
+  opacity: .8;
+}

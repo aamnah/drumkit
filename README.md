@@ -56,6 +56,8 @@ Download [Media Converter (macOS)](http://media-converter.sourceforge.net/)
 - For universal browser supported, it's better to convert the files to `.webm`
 - Converting all 11 sound files from `wav` to `web` reduced the overall size from 1.1mb to 414kb 
 
+Converting file formats and reducing file sizes massively sped up the audio playback, the delay is barely noticeable now. And i haven't gotten into _preloading_ or _merging_ all audios in one file and playing at aspecific position yet
+
 Links
 ---
 - [Keycode.info](http://keycode.info/)

@@ -50,3 +50,4 @@ Links
 - [MDN: .play()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/play)
 - [MDN: events](https://developer.mozilla.org/en-US/docs/Web/Events)
 - [MDN: transitionend](https://developer.mozilla.org/en-US/docs/Web/Events/transitionend)
+- [EJS: Handling Events](https://eloquentjavascript.net/15_event.html)

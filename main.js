@@ -1,5 +1,5 @@
 // JavaScript 30 by Wes Bos
-// https://www.youtube.com/watch?v=VuN8qwZoego&list=PLu8EoSxDXHP6CGK4YVJhL_VWetA865GOH
+// https://www.youtube.com/watch?v=VuN8qwZoego
 
 /*
 Creating a playAudio() function

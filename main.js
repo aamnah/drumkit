@@ -26,10 +26,7 @@ KEYBOARD
 window.addEventListener('keydown', function (e) {
   // when a key is pressed, get the corresponding <aduio> element
   const audio = document.querySelector(`audio[data-key="${e.key}"]`) // using `key` (e.g. `a`) because `keyCode` (e.g. 65) is deprecated
-  console.info(audio)
-  
   const key = document.querySelector(`div[data-key="${e.key}"`)
-  console.info(key)
 
   playAudio(audio)
 
@@ -50,13 +47,12 @@ let keys = document.querySelectorAll(`.key`) // returns a nodeList
 
 keys.forEach(function (key) {
   key.addEventListener('click', function (e) {
-    console.info(key)
     // when a <div> is clicked, get the corresponding <audio> element
     // (using the `data-key` attribute)
     const audio = document.querySelector(`audio[data-key="${key.getAttribute('data-key')}"]`)
-    console.info(audio)
 
     playAudio(audio)
+
     key.classList.add('playing') // add the effects to highlight which key was played
   })
 

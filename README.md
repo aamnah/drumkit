@@ -45,7 +45,7 @@ This seems to be a browser thing. Chrome plays audio on click just fine, without
 
 Other people seem to have had the [same](https://stackoverflow.com/questions/9811429/html5-audio-tag-on-safari-has-a-delay) [issue](https://stackoverflow.com/questions/46836692/delay-in-javascript-audio-playback)
 
-- Preloading `<audio>` and `<video>` on iOS devices is disabled to save bandwidth. My delay issue persists though even after the files have downloaded, and i'm not on an iOS device.
+- Preloading `<audio>` and `<video>` on iOS devices is disabled to save bandwidth. My delay issue persists though even after the files have downloaded, and i'm not on an iOS device. [stackoverflow](https://stackoverflow.com/a/9983005/890814)
 - You also [can't load multiple audio/video files](https://stackoverflow.com/questions/7862391/mobile-safari-audio-cache-manifest/7972609#7972609). 
 > If you play one file, go and play another, and then come back and it'll just load that file all over again. 
  

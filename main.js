@@ -60,3 +60,34 @@ keys.forEach(function (key) {
     key.classList.remove('playing') // remove the effects after the sound/transition has ended
   })
 })
+
+/*
+TOUCH
+Because iOS 9 won't recognize clicks as touch events
+
+- Gets all <div>s with `.key`
+- Uses a `forEach` loop to add a `click` event listener to all the divs
+- Gets the corresponding <audio> element which has a `data-key` using the same key as value
+- Plays audio and adds CSS class for visual effects
+- Remove the CSS class when the transition effect has ended (this also caters to removing the class when the keyboard was used for playing a sound)
+*/
+// var keys = Array.from(document.querySelectorAll(`.key`)) // turn the returned nodeList into an Array
+
+keys.forEach(function (key) {
+  key.addEventListener('touchstart', function (e) {
+    // when a <div> is clicked, get the corresponding <audio> element
+    // (using the `data-key` attribute)
+
+    console.info('tapped')
+    const audio = document.querySelector(`audio[data-key="${key.getAttribute('data-key')}"]`)
+
+    playAudio(audio)
+
+    key.classList.add('playing') // add the effects to highlight which key was played
+  })
+
+  key.addEventListener('transitionend', function (e) {
+    key.classList.remove('playing') // remove the effects after the sound/transition has ended
+  })
+})
+

@@ -41,9 +41,9 @@ MOUSE
 - Uses a `forEach` loop to add a `click` event listener to all the divs
 - Gets the corresponding <audio> element which has a `data-key` using the same key as value
 - Plays audio and adds CSS class for visual effects
-- Remove the CSS class when the transition effect has ended (this also caters to removig the class when the keyboard was used for playing a sound)
+- Remove the CSS class when the transition effect has ended (this also caters to removing the class when the keyboard was used for playing a sound)
 */
-let keys = document.querySelectorAll(`.key`) // returns a nodeList
+var keys = Array.from(document.querySelectorAll(`.key`)) // turn the returned nodeList into an Array
 
 keys.forEach(function (key) {
   key.addEventListener('click', function (e) {

@@ -58,6 +58,10 @@ Download [Media Converter (macOS)](http://media-converter.sourceforge.net/)
 
 Converting file formats and reducing file sizes massively sped up the audio playback, the delay is barely noticeable now. And i haven't gotten into _preloading_ or _merging_ all audios in one file and playing at aspecific position yet
 
+### iOS 9 Compatibility
+- older iOS 9 devices (e.g. first generation iPad Mini MD532LL/A) wasn't recognizing ES2015 JavaScript (got errors with `=>` arrow functions, `let`, and using `forEach` for a `nodeList`). The fix was simple enough, used `var` instead of `let`, a normal `function` declaration and converted the `nodeList` to an Array with `Array.from()`
+- CSS Grid also doesn't work on iOS 9 (only supported iOS 11 onwards). Added a Flexbox based fallback using `@supports not (display: grid) { .. }`
+
 Links
 ---
 - [Keycode.info](http://keycode.info/)

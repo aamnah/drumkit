@@ -56,6 +56,18 @@ keys.forEach(function (key) {
     key.classList.add('playing') // add the effects to highlight which key was played
   })
 
+  key.addEventListener('touchstart', function (e) {
+    // when a <div> is clicked, get the corresponding <audio> element
+    // (using the `data-key` attribute)
+
+    console.info('tapped')
+    const audio = document.querySelector(`audio[data-key="${key.getAttribute('data-key')}"]`)
+
+    playAudio(audio)
+
+    key.classList.add('playing') // add the effects to highlight which key was played
+  })
+
   key.addEventListener('transitionend', function (e) {
     key.classList.remove('playing') // remove the effects after the sound/transition has ended
   })

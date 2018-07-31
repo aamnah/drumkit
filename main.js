@@ -56,17 +56,16 @@ keys.forEach(function (key) {
     key.classList.add('playing') // add the effects to highlight which key was played
   })
 
-  key.addEventListener('touchstart', function (e) {
-    // when a <div> is clicked, get the corresponding <audio> element
-    // (using the `data-key` attribute)
+  // TOUCH
+  // Because iOS 9 won't recognize clicks as touch events. no audio would play as a result
+  // key.addEventListener('touchstart', function (e) {
+  //   e.preventDefault() // prevent default browser behavior, e.g. double-tap to zoom etc.
 
-    console.info('tapped')
-    const audio = document.querySelector(`audio[data-key="${key.getAttribute('data-key')}"]`)
+  //   const audio = document.querySelector(`audio[data-key="${key.getAttribute('data-key')}"]`)
+  //   playAudio(audio)
 
-    playAudio(audio)
-
-    key.classList.add('playing') // add the effects to highlight which key was played
-  })
+  //   key.classList.add('playing') // add the effects to highlight which key was played
+  // })
 
   key.addEventListener('transitionend', function (e) {
     key.classList.remove('playing') // remove the effects after the sound/transition has ended
@@ -85,21 +84,21 @@ Because iOS 9 won't recognize clicks as touch events
 */
 // var keys = Array.from(document.querySelectorAll(`.key`)) // turn the returned nodeList into an Array
 
-keys.forEach(function (key) {
-  key.addEventListener('touchstart', function (e) {
-    // when a <div> is clicked, get the corresponding <audio> element
-    // (using the `data-key` attribute)
+// keys.forEach(function (key) {
+//   key.addEventListener('touchstart', function (e) {
+//     // when a <div> is clicked, get the corresponding <audio> element
+//     // (using the `data-key` attribute)
 
-    console.info('tapped')
-    const audio = document.querySelector(`audio[data-key="${key.getAttribute('data-key')}"]`)
+//     console.info('tapped')
+//     const audio = document.querySelector(`audio[data-key="${key.getAttribute('data-key')}"]`)
 
-    playAudio(audio)
+//     playAudio(audio)
 
-    key.classList.add('playing') // add the effects to highlight which key was played
-  })
+//     key.classList.add('playing') // add the effects to highlight which key was played
+//   })
 
-  key.addEventListener('transitionend', function (e) {
-    key.classList.remove('playing') // remove the effects after the sound/transition has ended
-  })
-})
+//   key.addEventListener('transitionend', function (e) {
+//     key.classList.remove('playing') // remove the effects after the sound/transition has ended
+//   })
+// })
 
